@@ -29,6 +29,8 @@ namespace Lesson_16_ii__More_Lists_
         //creating Person with Name and Grade properties. 
         class Person
         {
+            //get means the rest of our program can 'get'/access the Name or game property
+            //set means the rest of our program can 'set'/assign values to the Name or Grade Property
             public string Name { get; set; }
             public int Grade { get; set; }
         }
@@ -76,6 +78,10 @@ namespace Lesson_16_ii__More_Lists_
             File.WriteAllText(filePath, ""); // clear file first
 
             using (StreamWriter writer = new StreamWriter(filePath))
+            /*StreamWriter is a class that lets you write text to a file, one line at a time.
+            new StreamWriter(filePath) opens the file for writing.
+            using (...) ensures that when the code inside the braces is finished, the file is
+            properly saved and closed*/
             {
                 for (int i = 0; i < students.Count; i++)
                 {
