@@ -99,13 +99,18 @@ namespace Lesson_16_ii__More_Lists_
             students.Clear();//clear list before adding items read from file
             
             string[] lines = File.ReadAllLines(filePath);
+            //read the file in, line by line into an array
             string name;
             int grade;
             for (int i = 0; i < lines.Length; i = i + 2)
             {
                 name = lines[i];
+                //read the 'ith' line in and it will be the name
+                
                 grade = Convert.ToInt16(lines[i + 1]);
+                //the next line will be the grade
                 students.Add(new Person { Name = name, Grade = grade });
+                //make new students with the properties of name and grade as read in
             }
 
         }
